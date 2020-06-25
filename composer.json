@@ -1,0 +1,27 @@
+{
+  "name": "xzito/applications",
+  "version": "1.0.0",
+  "type": "wordpress-muplugin",
+  "description": "WordPress CPT for applications.",
+  "homepage": "https://github.com/xzito/applications",
+  "authors": [
+    {
+      "name": "James Boynton",
+      "email": "james.boynton0@gmail.com",
+      "homepage": "https://github.com/jbboynton"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/xzito/applications/issues"
+  },
+  "require": {
+    "php": "^7.2.0",
+    "composer/installers": "^1.6.0",
+    "jjgrainger/posttypes": "^2.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Xzito\\Applications\\" : "src"
+    }
+  }
+}
