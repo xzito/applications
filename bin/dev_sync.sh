@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 root="$(git rev-parse --show-toplevel)"
 
 # shellcheck disable=SC1090,SC1091
