@@ -19,7 +19,6 @@ class Application {
   private $related_projects_count;
   private $projects_heading;
   private $list;
-  private $main_image;
   private $form_top_content;
   private $form_id;
 
@@ -67,7 +66,6 @@ class Application {
     $this->set_related_projects();
     $this->set_projects_heading();
     $this->set_list();
-    $this->set_main_image();
     $this->set_form_top_content();
     $this->set_form_id();
   }
@@ -135,10 +133,6 @@ class Application {
     return $this->projects_heading;
   }
 
-  public function main_image($size = 'full') {
-    return wp_get_attachment_image_url($this->main_image, $size);
-  }
-
   public function list() {
     $list = $this->list;
 
@@ -177,10 +171,6 @@ class Application {
 
   private function set_banner() {
     $this->banner = get_field('application_images', $this->id)['banner'];
-  }
-
-  private function set_main_image() {
-    $this->main_image = get_field('application_images', $this->id)['main'];
   }
 
   private function set_products_heading() {

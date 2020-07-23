@@ -108,30 +108,6 @@
                     "show_column_weight": 1000,
                     "allow_quickedit": 0,
                     "allow_bulkedit": 0
-                },
-                {
-                    "key": "field_5ee31d8859e8b",
-                    "label": "Main Image",
-                    "name": "main",
-                    "type": "image",
-                    "instructions": "",
-                    "required": 1,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "id",
-                    "preview_size": "medium",
-                    "library": "all",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": ""
                 }
             ]
         },
@@ -569,5 +545,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "Application information.",
-    "modified": 1595522699
+    "modified": 1595523751
 }
