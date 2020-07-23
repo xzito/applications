@@ -3,8 +3,8 @@
 namespace Xzito\Applications;
 
 use Xzito\Products\Product;
-use Xzito\Portfolios\Portfolio;
-use Xzito\Portfolios\PortfolioPostType;
+use Xzito\Portfolio\PortfolioPiece;
+use Xzito\Portfolio\PortfolioPostType;
 
 class Application {
   private $id;
@@ -213,7 +213,7 @@ class Application {
     $projects_ids = get_field('portfolios_applications', $this->id);
 
     $related_projects = array_map(function($project_id) {
-      return new Portfolio($project_id);
+      return new PortfolioPiece($project_id);
     }, $projects_ids);
 
     $this->related_projects = $related_projects;

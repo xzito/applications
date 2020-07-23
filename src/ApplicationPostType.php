@@ -11,7 +11,7 @@ class ApplicationPostType {
   public const SLUG = 'applications';
 
   private $cpt;
-  private $icon = 'dashicons-store';
+  private $icon = 'dashicons-screenoptions';
 
   public function __construct() {
     $this->create_post_type();
