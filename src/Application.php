@@ -53,6 +53,24 @@ class Application {
     return $query->posts ?? [];
   }
 
+  private static function find_published($post_type, $post_ids) {
+    $ids = [];
+
+    foreach ($post_ids as $id) {
+      $ids[] = intval($id);
+    }
+
+    $query = new \WP_Query([
+      'nopaging' => true,
+      'post_type' => $post_type,
+      'post_status' => 'publish',
+      'fields' => 'ids',
+      'post__in' => $ids,
+    ]);
+
+    return $query->posts ?? [];
+  }
+
   public function __construct($application_id = '') {
     $this->id = $application_id;
     $this->set_name();
@@ -204,7 +222,7 @@ class Application {
 
     $related_projects = array_map(function($project_id) {
       return new PortfolioPiece($project_id);
-    }, $projects_ids);
+    }, self::find_published(PortfolioPostType::ID, $projects_ids));
 
     $this->related_projects = $related_projects;
   }
